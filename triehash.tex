@@ -166,8 +166,8 @@
 
     We also introduced a minor optimization: For ASCII inputs, case insensitive
     operations are performed by performing an OR of the character with \textit{0x20},
-    that is by setting the bit that indicates uppercase - as long as that is
-    safe to do. The alternative would have been to generate two case statements
+    that is by setting the bit that indicates lowercase - as long as that is
+    safe to do\todo{Details}. The alternative would have been to generate two case statements
     for each character, which would need twice the comparisons in the worst
     case in the generated machine code. An example can be seen in Listing~\ref{lst:ascii}.
 
