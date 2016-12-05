@@ -70,6 +70,20 @@
     of the field names in Debian Packages files.
     
     \section{Related Work}
+    GPerf\cite{schmidt2000gperf} is a popular generator for perfect hash
+    functions from a set of words. For $n$ words, GPerf generates a lookup
+    table mapping keywords into the range $0\ldots k-1$ where $k \ge n$. This
+    lookup has false positives: Other words are recognized as well, so gperf
+    then performs a comparison of the entire string to see if it actually maps
+    the keyword. For case-insensitive operations, this is expensive: The case
+    normalization needed for such a comparison is quite inefficient on the
+    normal ANSI alphabet. TrieHash in contrast can produce more efficient
+    comparisons by simple OR instructions, as shown later.
+
+    trie-gen from gnulib generates tries from a set of words. It stores
+    the tries in the data segments of the programs, rather than the code
+    segments.
+
     RE2C\cite{bumbulis1993re2c} can convert regular grammars into C
     programs. It works by generating a DFA for the given grammar and
     then translating that DFA into C code.
