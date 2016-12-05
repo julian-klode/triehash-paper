@@ -89,7 +89,7 @@
     then translating that DFA into C code.
 
     It can essentially be used similarly to TrieHash, but requires a input
-    to be terminated by a NUL byte. As shown in section ~\ref{eval}, it is
+    to be terminated by a NUL byte. As shown in section~\ref{eval}, it is
     otherwise competitive with TrieHash for the test set of words.
 
     As an example, re2c is used by PHP for lexing the language keywords.
@@ -210,7 +210,7 @@
 
     
     
-    \section{Evaluation}
+    \section{Evaluation}\label{eval}
 Performance was evaluated against other hash functions. As an input set,
 the fields of Debian Packages and Sources files was used, and each hash
 function was run 1,000,000 times for each word. The byte count of the
